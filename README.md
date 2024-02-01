@@ -1,6 +1,6 @@
 # Contributors
 
-![]({-ActivityLocation-})
+![](https://raw.githubusercontent.com/CMU-313/spring24-nodebb-the-capibaras/activity-resources/image.svg)
 
 
 # ![NodeBB](public/images/sm-card.png)
