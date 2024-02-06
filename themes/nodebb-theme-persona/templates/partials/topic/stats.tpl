@@ -10,3 +10,7 @@
     <i class="fa fa-fw fa-eye" title="[[global:views]]"></i>
     <span class="human-readable-number" title="{viewcount}">{viewcount}</span>
 </div>
+<div class="stats text-muted">
+    <i class="fa fa-fw fa-check-circle" title="Resolved"></i>
+    <span class="resolved">{status}</span>
+</div>
