@@ -290,6 +290,7 @@ module.exports = function (Topics) {
     Topics.increaseViewCount = async function (tid) {
         const cid = await Topics.getTopicField(tid, 'cid');
         incrementFieldAndUpdateSortedSet(tid, 'viewcount', 1, ['topics:views', `cid:${cid}:tids:views`]);
+        //likely increments the viewcount and resorts the posts accordingly
     };
 
     async function incrementFieldAndUpdateSortedSet(tid, field, by, set) {

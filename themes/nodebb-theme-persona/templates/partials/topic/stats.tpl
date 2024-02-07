@@ -11,6 +11,6 @@
     <span class="human-readable-number" title="{viewcount}">{viewcount}</span>
 </div>
 <div class="stats text-muted">
-    <i class="fa fa-fw fa-check-circle" title="Resolved"></i>
-    <span class="resolved">{status}</span>
+    <i class="fa fa-fw fa-check-circle" title="[[global:isResolved]]"></i>
+    <span class="isResolved" title="{isResolved}">{isResolved}</span>
 </div>
