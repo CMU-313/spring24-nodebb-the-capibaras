@@ -272,7 +272,7 @@ async function getMainPosts(mainPids, uid) {
 // topic with tid by using Topics.getTopicField(tid, 'locked');
 Topics.isLocked = async function (tid) {
     const locked = await Topics.getTopicField(tid, 'locked');
-    console.log("im called here Topics.isLocked");//it's not printed out
+    // console.log("im called here Topics.isLocked");//it's not printed out
     return locked === 1;
 };
 

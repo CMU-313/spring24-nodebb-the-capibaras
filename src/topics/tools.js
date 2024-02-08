@@ -134,7 +134,7 @@ module.exports = function (Topics) {
         topicData.isResolved = resolve; // deprecate in v2.0
         topicData.resolved = resolve; //resolve field is true or false
 
-        plugins.hooks.fire('action:topic.lock', { topic: _.clone(topicData), uid: uid });
+        plugins.hooks.fire('action:topic.resolve', { topic: _.clone(topicData), uid: uid });
         return topicData;
     }
 
