@@ -55,6 +55,7 @@ export type TopicSlimProperties = {
   deleterUid: string;
   titleRaw: string;
   locked: string;
+  resolved: string;
   pinned: number;
   timestamp: string;
   timestampISO: number;
