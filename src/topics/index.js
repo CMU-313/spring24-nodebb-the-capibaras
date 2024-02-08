@@ -268,8 +268,8 @@ async function getMainPosts(mainPids, uid) {
     return await Topics.addPostData(postData, uid);
 }
 
-// retrive whether isLocked truth value by accessing the 'locked' field of 
-// topic with tid by using Topics.getTopicField(tid, 'locked');
+//  retrive whether isLocked truth value by accessing the 'locked' field of
+//  topic with tid by using Topics.getTopicField(tid, 'locked');
 Topics.isLocked = async function (tid) {
     const locked = await Topics.getTopicField(tid, 'locked');
     // console.log("im called here Topics.isLocked");//it's not printed out
