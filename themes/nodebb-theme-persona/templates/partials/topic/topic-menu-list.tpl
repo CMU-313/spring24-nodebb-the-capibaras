@@ -9,14 +9,7 @@
 <li><a component="topic/move-posts" href="#"><i class="fa fa-fw fa-arrows"></i> [[topic:thread_tools.move-posts]]</a></li>
 {{{ end }}}
 <li><a component="topic/mark-unread-for-all" href="#"><i class="fa fa-fw fa-inbox"></i> [[topic:thread_tools.markAsUnreadForAll]]</a></li>
-<li <!-- IF resolved -->hidden<!-- ENDIF resolved -->>
-    <a component="topic/resolve" href="#">
-        <i class="fa fa-fw fa-check"></i> [[topic:thread_tools.resolve]]
-    </a>
-</li>
 <li class="divider"></li>
-
-
 <!-- ENDIF privileges.editable -->
 
 <!-- IF privileges.deletable -->
