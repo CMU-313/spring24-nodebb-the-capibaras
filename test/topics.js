@@ -712,6 +712,8 @@ describe('Topic\'s', () => {
             });
         });
 
+
+
         it('should properly update sets when post is moved', (done) => {
             let movedPost;
             let previousPost;

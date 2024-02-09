@@ -60,6 +60,13 @@
                 <i class="fa fa-fw fa-trash-o"></i> [[topic:thread_tools.delete]]
             </a>
         </li>
+
+        <li>
+            <a component="topic/resolve" href="#">
+                <i class="fa fa-fw fa-check"></i> [[topic:thread_tools.resolve]]
+            </a>
+        </li>
+
         <li>
             <a component="topic/restore" href="#" class="hidden">
                 <i class="fa fa-fw fa-history"></i> [[topic:thread_tools.restore]]
