@@ -10,6 +10,10 @@
 {{{ end }}}
 <li><a component="topic/mark-unread-for-all" href="#"><i class="fa fa-fw fa-inbox"></i> [[topic:thread_tools.markAsUnreadForAll]]</a></li>
 <li class="divider"></li>
+
+<li class="divider"></li>
+<li><a component="topic/resolve" href="#"><i class="fa fa-fw fa-check"></i> [[topic:resolve_post]]</a></li>
+
 <!-- ENDIF privileges.editable -->
 
 <!-- IF privileges.deletable -->
