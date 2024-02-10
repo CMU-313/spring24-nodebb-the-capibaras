@@ -111,15 +111,15 @@ module.exports = function (Topics) {
     }
 
 
-    topicTools.markAsIsResolved = async function (tid, uid) {
+    topicTools.resolved = async function (tid, uid) {
         return await toggleResolved(tid, uid, true);
     };
 
-    topicTools.unmarkResolved = async function (tid, uid) {
+    topicTools.unResolved = async function (tid, uid) {
         return await toggleResolved(tid, uid, false);
     };
 
-    async function toggleResolved(tid, uid, resolve) {
+    async function toggleResolved(tid, uid, resolved) {
         const topicData = await Topics.getTopicFields(tid, ['tid', 'uid', 'cid']);
         if (!topicData || !topicData.cid) {
             throw new Error('[[error:no-topic]]');
@@ -128,12 +128,12 @@ module.exports = function (Topics) {
         if (!isAdminOrMod) {
             throw new Error('[[error:no-privileges]]');
         }
-        await Topics.setTopicField(tid, 'resolved', resolve ? 1 : 0);// set resolved field to 1/0 based on the second attribute of unmarkResolved
-        topicData.events = await Topics.events.log(tid, { type: resolve ? 'resolved' : 'active', uid });
-        topicData.isResolved = resolve;// deprecate in v2.0
-        topicData.resolved = resolve;// resolve field is true or false
+        await Topics.setTopicField(tid, 'resolved', resolved ? 1 : 0);// set resolved field to 1/0 based on the second attribute of unmarkResolved
+        topicData.events = await Topics.events.log(tid, { type: resolved ? 'resolved' : 'unResolved', uid });
+        topicData.isResolved = resolved;// deprecate in v2.0
+        topicData.resolved = resolved;// resolved field is true or false
 
-        plugins.hooks.fire('action:topic.resolve', { topic: _.clone(topicData), uid: uid });
+        plugins.hooks.fire('action:topic.resolved', { topic: _.clone(topicData), uid: uid });
         return topicData;
     }
 
