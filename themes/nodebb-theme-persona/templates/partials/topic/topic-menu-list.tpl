@@ -17,6 +17,8 @@
 <!-- ENDIF privileges.editable -->
 
 <!-- IF privileges.deletable -->
+<li class="divider"></li>
+<li><a component="topic/resolve" href="#"><i class="fa fa-fw fa-check"></i> [[topic:resolve_post]]</a></li>
 <li <!-- IF deleted -->hidden<!-- ENDIF deleted -->><a component="topic/delete" href="#" class="<!-- IF deleted -->hidden<!-- ENDIF deleted -->"><i class="fa fa-fw fa-trash-o"></i> [[topic:thread_tools.delete]]</a></li>
 {{{ if !scheduled }}}
 <li <!-- IF !deleted -->hidden<!-- ENDIF !deleted -->><a component="topic/restore" href="#" class="<!-- IF !deleted -->hidden<!-- ENDIF !deleted -->"><i class="fa fa-fw fa-history"></i> [[topic:thread_tools.restore]]</a></li>
