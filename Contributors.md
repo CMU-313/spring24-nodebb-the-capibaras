@@ -87,13 +87,13 @@
                     <tr>
                         <th align="left">
                             <a href="https://github.com/CMU-313/spring24-nodebb-the-capibaras/commits?author=Ella-ch&since=2024-01-20T00:00:00-05:00&until=2024-03-29T23:59:00-05:00">
-                            Commit: 4
+                            Commit: 5
                             </a>
                         </th>
                     </tr>
                     <tr>
                         <th align="left">
-                            Addition: 70
+                            Addition: 72
                         </th>
                     </tr>
                     <tr>
@@ -117,7 +117,7 @@
                     <tr>
                     <tr>
                         <th align="left">
-                            Comments: 2
+                            Comments: 3
                         </th>
                     <tr>
                 </table>
@@ -300,7 +300,7 @@
                     <tr>
                         <th align="left">
                             <a href="https://github.com/CMU-313/spring24-nodebb-the-capibaras/pulls?q=author%3Altyagi111111+type%3Apr+created%3A2024-01-20T00:00:00-05:00..2024-03-29T23:59:00-05:00">
-                            PRs: 1
+                            PRs: 2
                             </a>
                         </th>
                     <tr>
