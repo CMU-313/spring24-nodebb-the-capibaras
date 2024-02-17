@@ -5,6 +5,10 @@ const privileges = require('../privileges');
 module.exports = function (Posts) {
     Posts.tools = {};
 
+    Posts.tools.resolve = async function (uid, pid) {
+        return await togglePostResolve(uid, pid, true);
+    };
+
     Posts.tools.delete = async function (uid, pid) {
         return await togglePostDelete(uid, pid, true);
     };
@@ -39,6 +43,37 @@ module.exports = function (Posts) {
             post = await Posts.restore(pid, uid);
             post = await Posts.parsePost(post);
         }
+        return post;
+    }
+
+    async function togglePostResolve(uid, pid, resolve) {
+        const [postData, canResolve] = await Promise.all([
+            Posts.getPostData(pid),
+            privileges.posts.canResolve(pid, uid),
+        ]);
+        if (!postData) {
+            throw new Error('[[error:no-post]]');
+        }
+
+        if (postData.resolved && resolve) {
+            throw new Error('[[error:post-already-resolved]]');
+        } else if (!postData.resolved && !resolve) {
+            throw new Error('[[error:post-already-unresolved]]');
+        }
+
+        if (!canResolve.flag) {
+            throw new Error(canResolve.message);
+        }
+
+        let post;
+        if (resolve) {
+            post = await Posts.resolve(pid, uid); 
+        } else {
+            post = await Posts.unresolve(pid, uid);
+        }
+        // Assuming you want to re-parse the post to update its display (optional)
+        post = await Posts.parsePost(post);
+
         return post;
     }
 };

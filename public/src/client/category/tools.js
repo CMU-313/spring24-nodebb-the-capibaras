@@ -17,8 +17,15 @@ define('forum/category/tools', [
 
         handlePinnedTopicSort();
 
+        components.get('topic/resolve').on('click', function () {
+            console.log('Resolve click handler entered'); 
+            categoryCommand('res', '/state', 'resolve', onCommandComplete);
+            return false;
+        });
+
         components.get('topic/delete').on('click', function () {
             categoryCommand('del', '/state', 'delete', onDeletePurgeComplete);
+            console.log('Resolve click handler entered'); 
             return false;
         });
 
@@ -113,6 +120,42 @@ define('forum/category/tools', [
             });
         });
 
+        components.get('topic/resolve').on('click', function (event) {
+            event.preventDefault(); 
+            const tids = topicSelect.getSelectedTids();
+            if (!tids.length) {
+                return alerts.error('[[error:no-topics-selected]]');
+            }
+
+            tids.forEach(function(tid) {
+                resolve(tid); 
+            });
+        });
+        
+        function resolve(tid) {
+            const url = `/api/topics/${tid}/resolved`;
+
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Topic resolved:', data);
+            })
+            .catch(error => {
+                console.error('Error resolving topic:', error);
+            });
+        }
+        
+
         CategoryTools.removeListeners();
         socket.on('event:topic_deleted', setDeleteState);
         socket.on('event:topic_restored', setDeleteState);
@@ -122,6 +165,7 @@ define('forum/category/tools', [
         socket.on('event:topic_pinned', setPinnedState);
         socket.on('event:topic_unpinned', setPinnedState);
         socket.on('event:topic_moved', onTopicMoved);
+        socket.on('event:topic_resolved', setResolvedState);
     };
 
     function categoryCommand(method, path, command, onComplete) {
@@ -146,6 +190,7 @@ define('forum/category/tools', [
         case 'delete':
         case 'restore':
         case 'purge':
+        case 'resolve':
             bootbox.confirm(`[[topic:thread_tools.${command}_confirm]]`, execute);
             break;
 
@@ -162,12 +207,12 @@ define('forum/category/tools', [
     CategoryTools.removeListeners = function () {
         socket.removeListener('event:topic_deleted', setDeleteState);
         socket.removeListener('event:topic_restored', setDeleteState);
+        socket.removeListener('event:topic_resolved', setResolvedState);
         socket.removeListener('event:topic_purged', onTopicPurged);
         socket.removeListener('event:topic_locked', setLockedState);
         socket.removeListener('event:topic_unlocked', setLockedState);
         socket.removeListener('event:topic_pinned', setPinnedState);
         socket.removeListener('event:topic_unpinned', setPinnedState);
-        socket.removeListener('event:topic_moved', onTopicMoved);
     };
 
     function closeDropDown() {
@@ -265,6 +310,12 @@ define('forum/category/tools', [
 
     function onTopicMoved(data) {
         getTopicEl(data.tid).remove();
+    }
+
+    function setResolvedState(data) {
+        const topic = getTopicEl(data.tid);
+        topic.toggleClass('resolved', data.isResolved);
+        topic.find('[component="topic/resolve"]').toggleClass('hide', !data.isDeleted);
     }
 
     function onTopicPurged(data) {

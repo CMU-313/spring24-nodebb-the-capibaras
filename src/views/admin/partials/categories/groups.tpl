@@ -13,6 +13,8 @@
             <li role="presentation"><a href="#" data-priv="groups:posts:edit" class="<!-- IF groups.privileges.groups:posts:edit -->active<!-- ENDIF groups.privileges.groups:posts:edit -->">Edit Posts</a></li>
             <li role="presentation"><a href="#" data-priv="groups:posts:delete" class="<!-- IF groups.privileges.groups:posts:delete -->active<!-- ENDIF groups.privileges.groups:posts:delete -->">Delete Posts</a></li>
             <li role="presentation"><a href="#" data-priv="groups:topics:delete" class="<!-- IF groups.privileges.groups:topics:delete -->active<!-- ENDIF groups.privileges.groups:topics:delete -->">Delete Topics</a></li>
+            <li role="presentation"><a href="#" data-priv="groups:topics:resolve" class="<!-- IF groups.privileges.groups:topics:resolve -->active<!-- ENDIF groups.privileges.groups:topics:resolve -->">Resolve</a></li>
+       
         </ul>
     </div>
     {groups.displayName}
