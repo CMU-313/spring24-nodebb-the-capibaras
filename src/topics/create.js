@@ -14,7 +14,7 @@ const posts = require('../posts');
 const privileges = require('../privileges');
 const categories = require('../categories');
 const translator = require('../translator');
-const topics = require('../topics'); 
+const topics = require('../topics');
 
 module.exports = function (Topics) {
     Topics.create = async function (data) {
