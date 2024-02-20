@@ -16,9 +16,9 @@
     title="[[global:isResolved]]" ></i>
 
     {{{ if !isResolved }}}
-    <span class="isResolved" title="{isResolved}">active</span> 
+    <span class="isResolved" title="{isResolved}">this post is active</span> 
     {{{ else }}}
-    <span class="isResolved" title="{isResolved}">resolved</span>
+    <span class="isResolved" title="{isResolved}">this post is resolved</span>
     {{{ end }}}
 
 </div>
