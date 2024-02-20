@@ -210,7 +210,7 @@ define('forum/category/tools', [
         const isAnyLocked = isAny(isTopicLocked, tids);
         const isAnyScheduled = isAny(isTopicScheduled, tids);
         const areAllScheduled = areAll(isTopicScheduled, tids);
-        const isAnyResolved = isAny(isTopicResolved, tids);
+        // const isAnyResolved = isAny(isTopicResolved, tids);
 
         components.get('topic/delete').toggleClass('hidden', isAnyDeleted);
         components.get('topic/restore').toggleClass('hidden', isAnyScheduled || !isAnyDeleted);
@@ -251,7 +251,6 @@ define('forum/category/tools', [
     }
 
     function isTopicLocked(tid) {
-        console.log("hiiii ")
         return getTopicEl(tid).hasClass('locked');
     }
 

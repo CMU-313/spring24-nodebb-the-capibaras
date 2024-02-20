@@ -307,7 +307,7 @@ define('forum/topic/threadTools', [
     };
 
     ThreadTools.setResolvedState = function (data) {
-        console.log("resolved state is modified");
+        console.log('resolved state is modified');
         // const threadEl = components.get('topic');
         // if (parseInt(data.tid, 10) !== parseInt(threadEl.attr('data-tid'), 10)) {
         //     return;
@@ -316,17 +316,22 @@ define('forum/topic/threadTools', [
         // const isResolved = data.isResolved && !ajaxify.data.privileges.isAdminOrMod;;
 
         components.get('topic/resolve').toggleClass('hidden', data.isResolved).parent().attr('hidden', data.isResolved ? '' : null);
-        // components.get('topic/unResolve').toggleClass('hidden', !data.isResolved).parent().attr('hidden', !data.isResolved ? '' : null);
+        // components.get('topic/unResolve').
+        // toggleClass('hidden', !data.isResolved).parent().attr('hidden', !data.isResolved ? '' : null);
 
         // const hideReply = !!((data.isResolved || ajaxify.data.deleted) && !ajaxify.data.privileges.isAdminOrMod);
 
         // components.get('topic/reply/container').toggleClass('hidden', hideReply);
-        // components.get('topic/reply/locked').toggleClass('hidden', ajaxify.data.privileges.isAdminOrMod || !data.isLocked || ajaxify.data.deleted);
+        // components.get('topic/reply/locked').toggleClass('hidden', ajaxify
+        // .data.privileges.isAdminOrMod || !data.isLocked || ajaxify.data.deleted);
 
-        // threadEl.find('[component="post"]:not(.deleted) [component="post/reply"], [component="post"]:not(.deleted) [component="post/quote"]').toggleClass('hidden', hideReply);
+        // threadEl.find('[component="post"]:not(.deleted) [component="post/reply"], 
+        // [component="post"]:not(.deleted) [component="post/quote"]').toggleClass('hidden', hideReply);
+
         // threadEl.find('[component="post/edit"], [component="post/delete"]').toggleClass('hidden', isResolved);
 
-        // threadEl.find('[component="post"][data-uid="' + app.user.uid + '"].deleted [component="post/tools"]').toggleClass('hidden', isResolved);
+        // threadEl.find('[component="post"][data-uid="' + app.user.uid + '"]
+        // .deleted [component="post/tools"]').toggleClass('hidden', isResolved);
 
         // $('[component="topic/labels"] [component="topic/resolved"]').toggleClass('hidden', !data.isResolved);
         $('[component="post/tools"] .dropdown-menu').html('');
