@@ -254,9 +254,9 @@ define('forum/category/tools', [
         return getTopicEl(tid).hasClass('locked');
     }
 
-    function isTopicResolved(tid) {
-        return getTopicEl(tid).hasClass('resolved');
-    }
+    // function isTopicResolved(tid) {
+    //     return getTopicEl(tid).hasClass('resolved');
+    // }
 
     function isTopicPinned(tid) {
         return getTopicEl(tid).hasClass('pinned');
