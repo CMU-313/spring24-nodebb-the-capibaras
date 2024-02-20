@@ -73,6 +73,9 @@ async function cleanTopic(progress) {
             if (topic.hasOwnProperty('locked') && parseInt(topic.locked, 10) === 0) {
                 fieldsToDelete.push('locked');
             }
+            if (topic.hasOwnProperty('resolved') && parseInt(topic.resolved, 10) === 0) {
+                fieldsToDelete.push('resolved');
+            }
 
             // cleanup legacy fields, these are not used anymore
             const legacyFields = [

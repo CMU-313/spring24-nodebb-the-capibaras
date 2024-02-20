@@ -41,6 +41,7 @@ events.types = [
     'topic-fork',
     'topic-move',
     'topic-move-all',
+    'topic-resolve',
     'password-reset',
     'user-makeAdmin',
     'user-removeAdmin',

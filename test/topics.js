@@ -679,7 +679,7 @@ describe('Topic\'s', () => {
         });
 
         it('should mark topic as resolved', async () => {
-            await apiTopics.resolved({ uid: adminUid }, { tids: [newTopic.tid], cid: categoryObj.cid });
+            await apiTopics.resolve({ uid: adminUid }, { tids: [newTopic.tid], cid: categoryObj.cid });
             const isResolved = await topics.isResolved(newTopic.tid);
             assert(isResolved);
         });

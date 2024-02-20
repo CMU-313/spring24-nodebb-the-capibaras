@@ -130,25 +130,27 @@ topicsAPI.unpin = async function (caller, data) {
 };
 
 topicsAPI.lock = async function (caller, data) {
+    console.log("it should print out sth")
     await doTopicAction('lock', 'event:topic_locked', caller, {
         tids: data.tids,
     });
 };
 
 topicsAPI.unlock = async function (caller, data) {
+    console.log("it should print out sth")
     await doTopicAction('unlock', 'event:topic_unlocked', caller, {
         tids: data.tids,
     });
 };
 
-topicsAPI.resolved = async function (caller, data) {
-    await doTopicAction('resolved', 'event:topic_resolved', caller, {
+topicsAPI.resolve = async function (caller, data) {
+    await doTopicAction('resolve', 'event:topic_resolved', caller, {
         tids: data.tids,
     });
 };
 
 topicsAPI.unResolve = async function (caller, data) {
-    await doTopicAction('unResolved', 'event:topic_unResolved', caller, {
+    await doTopicAction('unResolve', 'event:topic_unResolved', caller, {
         tids: data.tids,
     });
 };

@@ -33,12 +33,25 @@ define('forum/category/tools', [
         });
 
         components.get('topic/lock').on('click', function () {
+            // console.log('handleClick function called');
             categoryCommand('put', '/lock', 'lock', onCommandComplete);
             return false;
         });
 
         components.get('topic/unlock').on('click', function () {
+            // console.log('handleClick function called');
             categoryCommand('del', '/lock', 'unlock', onCommandComplete);
+            return false;
+        });
+
+        components.get('topic/resolve').on('click', function () {
+            categoryCommand('put', '/resolve', 'resolve', onCommandComplete);
+            return false;
+        });
+
+        components.get('topic/unResolve').on('click', function () {
+            categoryCommand('del', '/resolve', 'unResolve', onCommandComplete);
+            // console.log('handleClick function called');
             return false;
         });
 
@@ -122,6 +135,8 @@ define('forum/category/tools', [
         socket.on('event:topic_pinned', setPinnedState);
         socket.on('event:topic_unpinned', setPinnedState);
         socket.on('event:topic_moved', onTopicMoved);
+        socket.on('event:topic_resolved', setResolvedState);
+        socket.on('event:topic_unResolved', setResolvedState);
     };
 
     function categoryCommand(method, path, command, onComplete) {
@@ -146,6 +161,7 @@ define('forum/category/tools', [
         case 'delete':
         case 'restore':
         case 'purge':
+        case 'resolve':
             bootbox.confirm(`[[topic:thread_tools.${command}_confirm]]`, execute);
             break;
 
@@ -165,6 +181,8 @@ define('forum/category/tools', [
         socket.removeListener('event:topic_purged', onTopicPurged);
         socket.removeListener('event:topic_locked', setLockedState);
         socket.removeListener('event:topic_unlocked', setLockedState);
+        socket.removeListener('event:topic_resolved', setResolvedState);
+        socket.removeListener('event:topic_unResolved', setResolvedState);
         socket.removeListener('event:topic_pinned', setPinnedState);
         socket.removeListener('event:topic_unpinned', setPinnedState);
         socket.removeListener('event:topic_moved', onTopicMoved);
@@ -192,6 +210,7 @@ define('forum/category/tools', [
         const isAnyLocked = isAny(isTopicLocked, tids);
         const isAnyScheduled = isAny(isTopicScheduled, tids);
         const areAllScheduled = areAll(isTopicScheduled, tids);
+        const isAnyResolved = isAny(isTopicResolved, tids);
 
         components.get('topic/delete').toggleClass('hidden', isAnyDeleted);
         components.get('topic/restore').toggleClass('hidden', isAnyScheduled || !isAnyDeleted);
@@ -204,6 +223,9 @@ define('forum/category/tools', [
         components.get('topic/unpin').toggleClass('hidden', areAllScheduled || !isAnyPinned);
 
         components.get('topic/merge').toggleClass('hidden', isAnyScheduled);
+
+        // components.get('topic/resolve').toggleClass('hidden', isAnyResolved);
+        // components.get('topic/unResolve').toggleClass('hidden', !isAnyUnResolved);
     }
 
     function isAny(method, tids) {
@@ -229,7 +251,12 @@ define('forum/category/tools', [
     }
 
     function isTopicLocked(tid) {
+        console.log("hiiii ")
         return getTopicEl(tid).hasClass('locked');
+    }
+
+    function isTopicResolved(tid) {
+        return getTopicEl(tid).hasClass('resolved');
     }
 
     function isTopicPinned(tid) {
@@ -261,6 +288,12 @@ define('forum/category/tools', [
         const topic = getTopicEl(data.tid);
         topic.toggleClass('locked', data.isLocked);
         topic.find('[component="topic/locked"]').toggleClass('hide', !data.isLocked);
+    }
+
+    function setResolvedState(data) {
+        const topic = getTopicEl(data.tid);
+        topic.toggleClass('resolved', data.isResolved);
+        topic.find('[component="topic/resolved"]').toggleClass('hide', !data.isResolved);
     }
 
     function onTopicMoved(data) {
