@@ -14,7 +14,7 @@ const posts = require('../posts');
 const privileges = require('../privileges');
 const categories = require('../categories');
 const translator = require('../translator');
-const topics = require('../topics');
+// const topics = require('../topics');
 
 module.exports = function (Topics) {
     Topics.create = async function (data) {
@@ -34,7 +34,7 @@ module.exports = function (Topics) {
             lastposttime: 0,
             postcount: 0,
             viewcount: 0,
-            isResolved: topics.isResolved(tid) ? 'resolve' : '',
+            isResolved: '', // topics.isResolved(tid) ? 'resolve' : '',
         };
 
         if (Array.isArray(data.tags) && data.tags.length) {
