@@ -16,12 +16,8 @@ define('forum/category/tools', [
         topicSelect.init(updateDropdownOptions);
 
         handlePinnedTopicSort();
+        console.log('Resolve click handler entered'); 
 
-        components.get('topic/resolve').on('click', function () {
-            console.log('Resolve click handler entered'); 
-            categoryCommand('res', '/state', 'resolve', onCommandComplete);
-            return false;
-        });
 
         components.get('topic/delete').on('click', function () {
             categoryCommand('del', '/state', 'delete', onDeletePurgeComplete);
@@ -45,6 +41,7 @@ define('forum/category/tools', [
         });
 
         components.get('topic/unlock').on('click', function () {
+            console.log('Resolve click handler entered'); 
             categoryCommand('del', '/lock', 'unlock', onCommandComplete);
             return false;
         });
@@ -122,24 +119,18 @@ define('forum/category/tools', [
 
         components.get('topic/resolve').on('click', function (event) {
             event.preventDefault(); 
-            const tids = topicSelect.getSelectedTids();
-            if (!tids.length) {
-                return alerts.error('[[error:no-topics-selected]]');
-            }
-
-            tids.forEach(function(tid) {
-                resolve(tid); 
-            });
+            categoryCommand('put', '/resolve', 'resolve', onCommandComplete);
         });
         
         function resolve(tid) {
-            const url = `/api/topics/${tid}/resolved`;
-
+            const url = `/api/topics/${tid}/resolve`;
+        
             fetch(url, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
+                body: JSON.stringify({ tids: [tid] }) 
             })
             .then(response => {
                 if (!response.ok) {
@@ -148,7 +139,7 @@ define('forum/category/tools', [
                 return response.json();
             })
             .then(data => {
-                console.log('Topic resolved:', data);
+                console.log('Topic resolve:', data);
             })
             .catch(error => {
                 console.error('Error resolving topic:', error);
@@ -165,7 +156,7 @@ define('forum/category/tools', [
         socket.on('event:topic_pinned', setPinnedState);
         socket.on('event:topic_unpinned', setPinnedState);
         socket.on('event:topic_moved', onTopicMoved);
-        socket.on('event:topic_resolved', setResolvedState);
+        socket.on('event:topic_resolve', setResolveState);
     };
 
     function categoryCommand(method, path, command, onComplete) {
@@ -204,10 +195,16 @@ define('forum/category/tools', [
         }
     }
 
+    function setResolveState(data) {
+        const topic = getTopicEl(data.tid);
+        topic.toggleClass('resolve', data.isresolve);
+        topic.find('[component="topic/resolve"]').toggleClass('hide', !data.isDeleted);
+    }
+
     CategoryTools.removeListeners = function () {
         socket.removeListener('event:topic_deleted', setDeleteState);
         socket.removeListener('event:topic_restored', setDeleteState);
-        socket.removeListener('event:topic_resolved', setResolvedState);
+        socket.removeListener('event:topic_resolve', setResolveState);
         socket.removeListener('event:topic_purged', onTopicPurged);
         socket.removeListener('event:topic_locked', setLockedState);
         socket.removeListener('event:topic_unlocked', setLockedState);
@@ -312,11 +309,7 @@ define('forum/category/tools', [
         getTopicEl(data.tid).remove();
     }
 
-    function setResolvedState(data) {
-        const topic = getTopicEl(data.tid);
-        topic.toggleClass('resolved', data.isResolved);
-        topic.find('[component="topic/resolve"]').toggleClass('hide', !data.isDeleted);
-    }
+   
 
     function onTopicPurged(data) {
         getTopicEl(data.tid).remove();

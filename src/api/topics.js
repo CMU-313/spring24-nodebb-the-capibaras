@@ -141,14 +141,14 @@ topicsAPI.unlock = async function (caller, data) {
     });
 };
 
-topicsAPI.resolved = async function (caller, data) {
-    await doTopicAction('resolved', 'event:topic_resolved', caller, {
+topicsAPI.resolve = async function (caller, data) {
+    await doTopicAction('resolve', 'event:topic_resolve', caller, {
         tids: data.tids,
     });
 };
 
 topicsAPI.unResolve = async function (caller, data) {
-    await doTopicAction('unResolved', 'event:topic_unResolved', caller, {
+    await doTopicAction('unResolve', 'event:topic_unResolve', caller, {
         tids: data.tids,
     });
 };

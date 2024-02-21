@@ -124,10 +124,10 @@ module.exports = function (Topics) {
         if (!topicData || !topicData.cid) {
             throw new Error('[[error:no-topic]]');
         }
-        const isAdminOrMod = await privileges.categories.isAdminOrMod(topicData.cid, uid);
+        /* const isAdminOrMod = await privileges.categories.isAdminOrMod(topicData.cid, uid);
         if (!isAdminOrMod) {
             throw new Error('[[error:no-privileges]]');
-        }
+        } */
         await Topics.setTopicField(tid, 'resolved', resolved ? 1 : 0);// set resolved field to 1/0 based on the second attribute of unmarkResolved
         topicData.events = await Topics.events.log(tid, { type: resolved ? 'resolved' : 'unResolved', uid });
         topicData.isResolved = resolved;// deprecate in v2.0

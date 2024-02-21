@@ -53,6 +53,7 @@ async function lockPosting(req, error) {
 
 Topics.delete = async (req, res) => {
     await api.topics.delete(req, { tids: [req.params.tid] });
+    console.log("hiiiiii");
     helpers.formatApiResponse(200, res);
 };
 
