@@ -11,6 +11,14 @@
     <span class="human-readable-number" title="{viewcount}">{viewcount}</span>
 </div>
 <div class="stats text-muted">
-    <i class="fa fa-fw fa-check-circle" title="[[global:isResolved]]"></i>
-    <span class="isResolved" title="{isResolved}">{isResolved}</span>
+    <i class= <!-- IF !isResolved --> "fa fa-fw fa-check-circle-o"
+    <!-- ELSE --> "fa fa-fw fa-check-circle"<!-- END -->
+    title="[[global:isResolved]]" ></i>
+
+    {{{ if !isResolved }}}
+    <span class="isResolved" title="{isResolved}">this post is active</span> 
+    {{{ else }}}
+    <span class="isResolved" title="{isResolved}">this post is resolved</span>
+    {{{ end }}}
+
 </div>
