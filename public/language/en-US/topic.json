@@ -81,6 +81,7 @@
     "thread_tools.unpin": "Unpin Topic",
     "thread_tools.lock": "Lock Topic",
     "thread_tools.resolve": "Resolve Topic",
+    "thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.unlock": "Unlock Topic",
     "thread_tools.move": "Move Topic",
     "thread_tools.move-posts": "Move Posts",
