@@ -39,11 +39,11 @@ Events._types = {
         icon: 'fa-unlock',
         text: '[[topic:unlocked-by]]',
     },
-    resolved: {
-        icon: 'fa-resolved',
+    resolve: {
+        icon: 'fa-resolve',
         text: '[[topic:solved-by]]',
     },
-    unResolved: {
+    unResolve: {
         icon: 'fa-unResolve',
         text: '[[topic:unSolved-by]]',
     },
