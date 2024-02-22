@@ -11,7 +11,6 @@ define('forum/category/tools', [
     'alerts',
 ], function (topicSelect, threadTools, components, api, bootbox, alerts) {
     const CategoryTools = {};
-
     CategoryTools.init = function () {
         topicSelect.init(updateDropdownOptions);
 
@@ -210,22 +209,18 @@ define('forum/category/tools', [
         const isAnyLocked = isAny(isTopicLocked, tids);
         const isAnyScheduled = isAny(isTopicScheduled, tids);
         const areAllScheduled = areAll(isTopicScheduled, tids);
-        // const isAnyResolved = isAny(isTopicResolved, tids);
+        const isAnyResolved = isAny(isTopicResolved, tids);
 
         components.get('topic/delete').toggleClass('hidden', isAnyDeleted);
         components.get('topic/restore').toggleClass('hidden', isAnyScheduled || !isAnyDeleted);
         components.get('topic/purge').toggleClass('hidden', !areAllDeleted);
-
         components.get('topic/lock').toggleClass('hidden', isAnyLocked);
         components.get('topic/unlock').toggleClass('hidden', !isAnyLocked);
-
         components.get('topic/pin').toggleClass('hidden', areAllScheduled || isAnyPinned);
         components.get('topic/unpin').toggleClass('hidden', areAllScheduled || !isAnyPinned);
-
         components.get('topic/merge').toggleClass('hidden', isAnyScheduled);
-
-        // components.get('topic/resolve').toggleClass('hidden', isAnyResolved);
-        // components.get('topic/unResolve').toggleClass('hidden', !isAnyUnResolved);
+        components.get('topic/resolve').toggleClass('hidden', isAnyResolved);
+        components.get('topic/unResolve').toggleClass('hidden', !isAnyResolved);
     }
 
     function isAny(method, tids) {
@@ -254,9 +249,9 @@ define('forum/category/tools', [
         return getTopicEl(tid).hasClass('locked');
     }
 
-    // function isTopicResolved(tid) {
-    //     return getTopicEl(tid).hasClass('resolved');
-    // }
+    function isTopicResolved(tid) {
+        return getTopicEl(tid).hasClass('resolved');
+    }
 
     function isTopicPinned(tid) {
         return getTopicEl(tid).hasClass('pinned');
@@ -292,8 +287,10 @@ define('forum/category/tools', [
     function setResolvedState(data) {
         const topic = getTopicEl(data.tid);
         topic.toggleClass('resolved', data.isResolved);
-        topic.find('[component="topic/resolved"]').toggleClass('hide', !data.isResolved);
+
+        topic.find('[component="topic/resolve"]').toggleClass('hide', !data.isResolved);
     }
+
 
     function onTopicMoved(data) {
         getTopicEl(data.tid).remove();

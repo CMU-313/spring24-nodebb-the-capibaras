@@ -316,8 +316,7 @@ define('forum/topic/threadTools', [
         // const isResolved = data.isResolved && !ajaxify.data.privileges.isAdminOrMod;;
 
         components.get('topic/resolve').toggleClass('hidden', data.isResolved).parent().attr('hidden', data.isResolved ? '' : null);
-        // components.get('topic/unResolve').
-        // toggleClass('hidden', !data.isResolved).parent().attr('hidden', !data.isResolved ? '' : null);
+        components.get('topic/unResolve').toggleClass('hidden', !data.isResolved).parent().attr('hidden', !data.isResolved ? '' : null);
 
         // const hideReply = !!((data.isResolved || ajaxify.data.deleted) && !ajaxify.data.privileges.isAdminOrMod);
 
