@@ -11,7 +11,6 @@ define('forum/category/tools', [
     'alerts',
 ], function (topicSelect, threadTools, components, api, bootbox, alerts) {
     const CategoryTools = {};
-
     CategoryTools.init = function () {
         topicSelect.init(updateDropdownOptions);
 
@@ -217,14 +216,9 @@ define('forum/category/tools', [
         components.get('topic/purge').toggleClass('hidden', !areAllDeleted);
         components.get('topic/lock').toggleClass('hidden', isAnyLocked);
         components.get('topic/unlock').toggleClass('hidden', !isAnyLocked);
-
-      
-
         components.get('topic/pin').toggleClass('hidden', areAllScheduled || isAnyPinned);
         components.get('topic/unpin').toggleClass('hidden', areAllScheduled || !isAnyPinned);
-
         components.get('topic/merge').toggleClass('hidden', isAnyScheduled);
-
         components.get('topic/resolve').toggleClass('hidden', isAnyResolved);
         components.get('topic/unResolve').toggleClass('hidden', !isAnyResolved);
     }
@@ -256,8 +250,8 @@ define('forum/category/tools', [
     }
 
     function isTopicResolved(tid) {
-         return getTopicEl(tid).hasClass('resolved');
-     }
+        return getTopicEl(tid).hasClass('resolved');
+    }
 
     function isTopicPinned(tid) {
         return getTopicEl(tid).hasClass('pinned');
@@ -295,7 +289,6 @@ define('forum/category/tools', [
         topic.toggleClass('resolved', data.isResolved);
 
         topic.find('[component="topic/resolve"]').toggleClass('hide', !data.isResolved);
-
     }
 
 
