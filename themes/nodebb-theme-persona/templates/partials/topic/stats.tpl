@@ -10,15 +10,9 @@
     <i class="fa fa-fw fa-eye" title="[[global:views]]"></i>
     <span class="human-readable-number" title="{viewcount}">{viewcount}</span>
 </div>
-<div class="stats text-muted">
-    <i class= <!-- IF !isResolved --> "fa fa-fw fa-check-circle-o"
-    <!-- ELSE --> "fa fa-fw fa-check-circle"<!-- END -->
-    title="[[global:isResolved]]" ></i>
-
-    {{{ if !isResolved }}}
-    <span class="isResolved" title="{isResolved}">this post is active</span> 
-    {{{ else }}}
-    <span class="isResolved" title="{isResolved}">this post is resolved</span>
-    {{{ end }}}
-
+<div class="stats text-muted">   
+    <li <!-- IF resolved -->hidden<!-- ENDIF resolved -->><a component="topic/resolve" href="#" class="<!-- IF resolved -->hidden<!-- ENDIF resolved -->"><i class="fa fa-fw fa-circle-o"></i> Unresolved</a></li>
+    <li <!-- IF !resolved -->hidden<!-- ENDIF !resolved -->><a component="topic/unResolve" href="#" class="<!-- IF !resolved -->hidden<!-- ENDIF !resolved -->"><i class="fa fa-fw fa-check-circle-o"></i> Resolved</a></li>
 </div>
+
+ 
