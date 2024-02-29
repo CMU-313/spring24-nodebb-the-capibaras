@@ -1,3 +1,4 @@
+# User Guide for Resolve Feature
 As part of an effort to provide more tools, similar to those found in other tools like piazza, ed, and other discussion forums, we decided to implement a resolve status feature. The feature allows people with administrator access to make and unmark questions as resolved as an effort to communicate with others whether a certain post still needs attention or not. 
 
 How to use/test the resolve feature:
@@ -6,15 +7,16 @@ How to use/test the resolve feature:
 
 2) Create a new post (alternatively, use another old post that you created after the update)
 
-3) After the creation of the post, you should be able to see an indicator with an open checked circle icon on the top left of the page, next to the view counts and reply count. This indicator is initally set to be active
+3) After the creation of the post, you should be able to see an indicator with an open circle icon on the top left of the page, next to the view counts and reply count. This indicator is initally set to be active
 
-4) Go to the tools button on the top right of the question, where lock topics and delete topics is located
+4) Go to the tools button on the top right of the question, which is next to the reply button
 
-5) Press “resolve”  button. This should trigger the indicator to show this post is resolved with a filled check circle. 
-
+5) Press “resolve”  button. This should trigger the indicator to show this post is resolved with a checked circle. 
+![unresolved](unresolvedBox.png)
 6) Repeat step 4 and press the “unresolve” button to toggle the resolved status back to active. 
+![resolved](resolvedBox.png)
 
-Additional testing:
+## Additional testing:
 
 We also created automated tests for the backend functions in test/topics.js. 
 
