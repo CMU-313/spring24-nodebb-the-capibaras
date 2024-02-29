@@ -93,6 +93,8 @@
     "thread_tools.restore": "Obnoviť tému",
     "thread_tools.restore_confirm": "Ste si naozaj istý že chcete obnoviť túto tému?",
     "thread_tools.purge": "Vyčistiť tému",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Ste si naozaj istý že chcete vyčistiť túto tému?",
     "thread_tools.merge_topics": "Zlúčiť témy",
     "thread_tools.merge": "Zlúčiť",

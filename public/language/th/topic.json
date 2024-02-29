@@ -93,6 +93,8 @@
     "thread_tools.restore": "กู้กระทู้",
     "thread_tools.restore_confirm": "มั่นใจแล้วหรือไม่ที่จะกู้คืน Topic นี้?",
     "thread_tools.purge": "ล้างกระทู้",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "คุณแน่ใจแล้วใช้ไมว่าต้องการล้างกระทู้นี้?",
     "thread_tools.merge_topics": "รวมกระทู้",
     "thread_tools.merge": "รวม",

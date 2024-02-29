@@ -93,6 +93,8 @@
     "thread_tools.restore": "Restaurer le sujet",
     "thread_tools.restore_confirm": "Êtes-vous sûr de bien vouloir restaurer ce sujet ?",
     "thread_tools.purge": "Supprimer définitivement le(s) sujet(s)",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Êtes-vous sûr de bien vouloir supprimer définitivement ce sujet ?",
     "thread_tools.merge_topics": "Fusionner les Sujets",
     "thread_tools.merge": "Fusionner",

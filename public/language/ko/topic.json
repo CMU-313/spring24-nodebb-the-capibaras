@@ -93,6 +93,8 @@
     "thread_tools.restore": "화제 복원",
     "thread_tools.restore_confirm": "이 화제를 복원하시겠습니까?",
     "thread_tools.purge": "화제 완전 삭제",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "이 화제를 완전히 삭제하시겠습니까?",
     "thread_tools.merge_topics": "화제 병합",
     "thread_tools.merge": "병합",

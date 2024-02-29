@@ -93,6 +93,8 @@
     "thread_tools.restore": "Palauta aihe",
     "thread_tools.restore_confirm": "Haluatko varmasti palauttaa tämän aiheen?",
     "thread_tools.purge": "Poista aihe pysyvästi",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Oletko varma, että haluat poistaa pysyvästi tämän aiheen?",
     "thread_tools.merge_topics": "Sulauta aiheet",
     "thread_tools.merge": "Sulauta",

@@ -93,6 +93,8 @@
     "thread_tools.restore": "恢復主題",
     "thread_tools.restore_confirm": "確定要恢復此主題嗎？",
     "thread_tools.purge": "清除主題",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "確認清除此主題嗎？",
     "thread_tools.merge_topics": "合併主題",
     "thread_tools.merge": "合併",

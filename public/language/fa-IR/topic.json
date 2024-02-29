@@ -93,6 +93,8 @@
     "thread_tools.restore": "برگرداندن موضوع",
     "thread_tools.restore_confirm": "آیا مطمئنید که می خواهید این موضوع را بازگردانی کنید؟",
     "thread_tools.purge": "پاک کردن موضوع",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "آیا مطمئنید که میمید این موضوع را پاکسازی کنید؟",
     "thread_tools.merge_topics": "ادغام موضوع ها",
     "thread_tools.merge": "ادغام",

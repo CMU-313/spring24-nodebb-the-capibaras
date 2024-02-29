@@ -93,6 +93,8 @@
     "thread_tools.restore": "Restaurar Tópico",
     "thread_tools.restore_confirm": "Tem certeza que deseja restaurar este tópico?",
     "thread_tools.purge": "Expurgar Tópico",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Tem certeza que deseja expurgar este tópico? ",
     "thread_tools.merge_topics": "Mesclar Tópicos",
     "thread_tools.merge": "Mesclar",

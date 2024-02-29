@@ -93,6 +93,8 @@
     "thread_tools.restore": "Ripristina Discussione",
     "thread_tools.restore_confirm": "Sei sicuro di voler ripristinare questa discussione?",
     "thread_tools.purge": "Elimina definitivamente discussione",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Sei sicuro di voler eliminare definitivamente questa discussione?",
     "thread_tools.merge_topics": "Unisci le Discussioni",
     "thread_tools.merge": "Unisci",

@@ -93,6 +93,8 @@
     "thread_tools.restore": "Pulihkan topik",
     "thread_tools.restore_confirm": "Anda yakin untuk pulihkan topik ini?",
     "thread_tools.purge": "Singkirkan Topik",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Anda yakin untuk singkirkan topik ini?",
     "thread_tools.merge_topics": "Merge Topics",
     "thread_tools.merge": "Merge",

@@ -93,6 +93,8 @@
     "thread_tools.restore": "Témakör visszaállítása",
     "thread_tools.restore_confirm": "Biztos vissza akarod állítani a témakört?",
     "thread_tools.purge": "Témakör végleges törlése",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Biztos végleg törölni akarod a témakört?",
     "thread_tools.merge_topics": "Témakörök összevonása",
     "thread_tools.merge": "Összevonás",

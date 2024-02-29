@@ -93,6 +93,8 @@
     "thread_tools.restore": "Atkurti temą",
     "thread_tools.restore_confirm": "Ar jūs tikrai norite atkurti šią temą?",
     "thread_tools.purge": "Išvalyti temą",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Ar tikrai norite išvalyti šią temą?",
     "thread_tools.merge_topics": "Merge Topics",
     "thread_tools.merge": "Merge",

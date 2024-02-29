@@ -93,6 +93,8 @@
     "thread_tools.restore": "Onderwerp herstellen",
     "thread_tools.restore_confirm": "Zeker weten dit onderwerp te herstellen?",
     "thread_tools.purge": "Wis onderwerp ",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Weet je zeker dat je dit onderwerp wil verwijderen?",
     "thread_tools.merge_topics": "Onderwerpen samenvoegen",
     "thread_tools.merge": "Samenvoegen",

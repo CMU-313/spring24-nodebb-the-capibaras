@@ -93,6 +93,8 @@
     "thread_tools.restore": "Torra a s'Arresonada Allogada",
     "thread_tools.restore_confirm": "Are you sure you want to restore this topic?",
     "thread_tools.purge": "Purge Topic",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Are you sure you want to purge this topic?",
     "thread_tools.merge_topics": "Merge Topics",
     "thread_tools.merge": "Merge",

@@ -93,6 +93,8 @@
     "thread_tools.restore": "Obnovi temo",
     "thread_tools.restore_confirm": "Ste prepričani, da želite obnoviti to temo?",
     "thread_tools.purge": "Očisti temo",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Ste prepričani, da želite očistiti to temo?",
     "thread_tools.merge_topics": "Združi teme",
     "thread_tools.merge": "Združi",

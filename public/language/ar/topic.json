@@ -93,6 +93,8 @@
     "thread_tools.restore": "استعادة الموضوع",
     "thread_tools.restore_confirm": "هل أنت متأكد أنك تريد استعادة هذا الموضوع؟",
     "thread_tools.purge": "تطهير الموضوع",
+    "thread_tools.resolve": "حل الموضوع",
+	"thread_tools.unresolve": "عدم حل الموضوع",
     "thread_tools.purge_confirm": "هل أنت متأكد أنك تريد تطهير هذا الموضوع؟",
     "thread_tools.merge_topics": "Merge Topics",
     "thread_tools.merge": "Merge",

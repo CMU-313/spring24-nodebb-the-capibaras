@@ -93,6 +93,8 @@
     "thread_tools.restore": "Възстановяване на темата",
     "thread_tools.restore_confirm": "Наистина ли искате да възстановите тази тема?",
     "thread_tools.purge": "Изчистване на темата",
+    "thread_tools.resolve": "Разрешете темата",
+	"thread_tools.unresolve": "Разрешаване на тема",
     "thread_tools.purge_confirm": "Наистина ли искате да изчистите тази тема?",
     "thread_tools.merge_topics": "Сливане на темите",
     "thread_tools.merge": "Сливане",

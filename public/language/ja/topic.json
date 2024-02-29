@@ -93,6 +93,8 @@
     "thread_tools.restore": "スレッドをリストア",
     "thread_tools.restore_confirm": "本当にこのスレッドを戻しますか？",
     "thread_tools.purge": "スレッドを切り離します",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "本当にこのスレッドを切り離しますか？",
     "thread_tools.merge_topics": "トピックを置き換える",
     "thread_tools.merge": "置き換え",

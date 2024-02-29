@@ -93,6 +93,8 @@
     "thread_tools.restore": "Обнови тему",
     "thread_tools.restore_confirm": "Да ли сте сигурни да желите да обновите ову тему?",
     "thread_tools.purge": "Очисти тему",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Да ли сте сигурни да желите да очистите ову тему?",
     "thread_tools.merge_topics": "Споји теме",
     "thread_tools.merge": "Споји",
