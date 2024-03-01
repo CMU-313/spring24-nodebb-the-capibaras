@@ -93,6 +93,8 @@
     "thread_tools.restore": "Restaurează Subiect",
     "thread_tools.restore_confirm": "Esti sigur că vrei să restaurezi acest subiect?",
     "thread_tools.purge": "Curăță Subiect",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Ești sigur că vrei sa cureți acest subiect?",
     "thread_tools.merge_topics": "Merge Topics",
     "thread_tools.merge": "Merge",

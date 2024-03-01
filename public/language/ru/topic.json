@@ -93,6 +93,8 @@
     "thread_tools.restore": "Восстановить тему",
     "thread_tools.restore_confirm": "Вы уверены, что хотите восстановить эту тему?",
     "thread_tools.purge": "Стереть тему",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Вы уверены, что хотите стереть эту тему?",
     "thread_tools.merge_topics": "Объединить темы",
     "thread_tools.merge": "Объединить",

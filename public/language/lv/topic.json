@@ -93,6 +93,8 @@
     "thread_tools.restore": "Atjaunot tematu",
     "thread_tools.restore_confirm": "Vai tiešām vēlies atjaunot šo tematu?",
     "thread_tools.purge": "Iztīrīt tematu",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Vai tiešām vēlies iztīrīt šo tematu?",
     "thread_tools.merge_topics": "Apvienot tematus",
     "thread_tools.merge": "Apvienot tematus",

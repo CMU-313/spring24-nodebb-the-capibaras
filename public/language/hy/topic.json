@@ -93,6 +93,8 @@
     "thread_tools.restore": "Վերականգնել թեման",
     "thread_tools.restore_confirm": "Վստա՞հ եք, որ ուզում եք վերականգնել այս թեման։",
     "thread_tools.purge": "Մաքրել թեման",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Վստա՞հ եք, որ ցանկանում եք մաքրել այս թեման:",
     "thread_tools.merge_topics": "Միավորել թեմաները",
     "thread_tools.merge": "Միավորել ",

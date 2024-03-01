@@ -93,6 +93,8 @@
     "thread_tools.restore": "Thema wiederherstellen",
     "thread_tools.restore_confirm": "Bist du sicher, dass du dieses Thema wiederherstellen möchtest?",
     "thread_tools.purge": "Thema endgültig löschen",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Bist du sicher, dass du dieses Thema endgültig löschen möchtest?",
     "thread_tools.merge_topics": "Themen vereinen",
     "thread_tools.merge": "Vereinen",

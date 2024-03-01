@@ -93,6 +93,8 @@
     "thread_tools.restore": "Başlığı Geri Getir",
     "thread_tools.restore_confirm": "Bu başlığı gerçekten geri getirmek istiyor musunuz?",
     "thread_tools.purge": "Başlığı Temizle",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Bu konuyu temizlemek istediğinize emin misiniz?",
     "thread_tools.merge_topics": "Başlıkları Birleştir",
     "thread_tools.merge": "Birleştir",

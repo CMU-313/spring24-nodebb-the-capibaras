@@ -93,6 +93,8 @@
     "thread_tools.restore": "Povrati temu",
     "thread_tools.restore_confirm": "Sigurni ste da želite povratiti ovu temu?",
     "thread_tools.purge": "Odbaci temu",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Sigurni ste da želite odbaciti ovu temu?",
     "thread_tools.merge_topics": "Merge Topics",
     "thread_tools.merge": "Merge",

@@ -93,6 +93,8 @@
     "thread_tools.restore": "Subizaho Ikiganiro",
     "thread_tools.restore_confirm": "Wiringiye neza ko ushaka kugarura iki kiganiro?",
     "thread_tools.purge": "Sibanganya Ikiganiro",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Wiringiye neza ko ushaka gusibanganya iki kiganiro?",
     "thread_tools.merge_topics": "Merge Topics",
     "thread_tools.merge": "Merge",

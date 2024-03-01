@@ -93,6 +93,8 @@
     "thread_tools.restore": "Restaurar tema",
     "thread_tools.restore_confirm": "¿Estás seguro que deseas restaurar este tema?",
     "thread_tools.purge": "Purgar tema",
+    "thread_tools.resolve": "Resolver tema",
+	"thread_tools.unresolve": "Tema no resuelto",
     "thread_tools.purge_confirm": "¿Está seguro que desea eliminar definitivamente (purgar) este tema?",
     "thread_tools.merge_topics": "Fusionar temas",
     "thread_tools.merge": "Fusionar",

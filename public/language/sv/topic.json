@@ -93,6 +93,8 @@
     "thread_tools.restore": "Återställ ämne",
     "thread_tools.restore_confirm": "Är du säker på att du vill återställa det här ämnet?",
     "thread_tools.purge": "Rensa bort ämne",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Är du säker att du vill rensa bort det här ämnet?",
     "thread_tools.merge_topics": "Slå samman ämnen",
     "thread_tools.merge": "Slå samman",

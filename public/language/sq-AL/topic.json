@@ -93,6 +93,8 @@
     "thread_tools.restore": "Rivendos temën",
     "thread_tools.restore_confirm": "Jeni i sigurt që dëshironi ta rivendosni këtë temë?",
     "thread_tools.purge": "Pastroni temën",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Jeni i sigurt që dëshironi ta pastroni këtë temë?",
     "thread_tools.merge_topics": "Bashko temat",
     "thread_tools.merge": "Bashko",

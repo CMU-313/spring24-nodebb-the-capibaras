@@ -93,6 +93,8 @@
     "thread_tools.restore": "Gjenopprett tråd",
     "thread_tools.restore_confirm": "Er du sikker på at du vil gjenopprette denne tråden?",
     "thread_tools.purge": "Rensk tråd",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Er du sikker på at du vil renske denne tråden?",
     "thread_tools.merge_topics": "Flett emner",
     "thread_tools.merge": "Slå sammen",

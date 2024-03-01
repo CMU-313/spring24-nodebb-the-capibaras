@@ -93,6 +93,8 @@
     "thread_tools.restore": "Przywróć temat",
     "thread_tools.restore_confirm": "Czy na pewno chcesz przywrócić ten temat?",
     "thread_tools.purge": "Wymaż temat",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Na pewno chcesz wyczyścić ten temat?",
     "thread_tools.merge_topics": "Połącz tematy",
     "thread_tools.merge": "Połącz",

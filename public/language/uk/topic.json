@@ -93,6 +93,8 @@
     "thread_tools.restore": "Відновити тему",
     "thread_tools.restore_confirm": "Ви точно бажаєте відновити цю тему?",
     "thread_tools.purge": "Стерти тему",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Ви точно бажаєте стерти цю тему?",
     "thread_tools.merge_topics": "Об'єднати теми",
     "thread_tools.merge": "Об'єднати",

@@ -93,6 +93,8 @@
     "thread_tools.restore": "Phục hồi chủ đề",
     "thread_tools.restore_confirm": "Bạn có muốn phục hồi chủ đề này?",
     "thread_tools.purge": "Xóa hẳn chủ đề",
+    "thread_tools.resolve": "Resolve Topic",
+	"thread_tools.unresolve": "Unresolve Topic",
     "thread_tools.purge_confirm": "Bạn có muốn xóa hẳn chủ đề này?",
     "thread_tools.merge_topics": "Gộp chủ đề",
     "thread_tools.merge": "Gộp",

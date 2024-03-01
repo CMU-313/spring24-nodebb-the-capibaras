@@ -93,6 +93,8 @@
     "thread_tools.restore": "টপিক পুনরূদ্ধার করুন",
     "thread_tools.restore_confirm": "আপনি নিশ্চিত যে আপনি টপিকটি পুনরূদ্ধার করতে চান?",
     "thread_tools.purge": "টপিক পার্জ করুন",
+    "thread_tools.resolve": "বিষয় সমাধান করুন",
+	"thread_tools.unresolve": "অমীমাংসিত বিষয়",
     "thread_tools.purge_confirm": "আপনি নিশ্চিত যে আপনি টপিকটি পার্জ করতে চাচ্ছেন ? ",
     "thread_tools.merge_topics": "Merge Topics",
     "thread_tools.merge": "Merge",
