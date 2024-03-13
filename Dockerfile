@@ -22,7 +22,7 @@ ENV NODE_ENV=production \
     daemon=false \
     silent=false
 
-EXPOSE 33552
+EXPOSE 4567
 
 RUN chmod +x create_config.sh
 
