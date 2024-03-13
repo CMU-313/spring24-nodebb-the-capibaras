@@ -1,6 +1,6 @@
 FROM node:lts
 
-RUN npm install --only=prod && \
+
 RUN npm install && \
 RUN mkdir -p /usr/src/app && \
     chown -R node:node /usr/src/app
