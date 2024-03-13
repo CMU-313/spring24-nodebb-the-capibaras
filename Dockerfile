@@ -1,7 +1,5 @@
 FROM node:lts
 
-
-RUN npm install && \
 RUN mkdir -p /usr/src/app && \
     chown -R node:node /usr/src/app
 WORKDIR /usr/src/app
@@ -13,7 +11,7 @@ COPY --chown=node:node install/package.json /usr/src/app/package.json
 
 USER node
 
-RUN npm install --only=prod && \
+RUN npm install && \
     npm cache clean --force
 
 COPY --chown=node:node . /usr/src/app
