@@ -12,9 +12,10 @@
     "scripts": {
         "start": "npx tsc && node loader.js",
         "lint": "npx tsc && eslint --cache ./nodebb .",
-        "test": "npx tsc && nyc --reporter=html --reporter=text-summary mocha",
+        "test": "standard && npx tsc && nyc --reporter=html --reporter=text-summary mocha",
         "coverage": "nyc report --reporter=text-lcov > ./coverage/lcov.info",
-        "coveralls": "nyc report --reporter=text-lcov | coveralls && rm -r coverage"
+        "coveralls": "nyc report --reporter=text-lcov | coveralls && rm -r coverage",
+        "testcommand": "npx standard"
     },
     "nyc": {
         "exclude": [
@@ -143,7 +144,8 @@
         "xml": "1.0.1",
         "xregexp": "5.1.1",
         "yargs": "17.6.2",
-        "zxcvbn": "4.4.2"
+        "zxcvbn": "4.4.2",
+        "standard": "*"
     },
     "devDependencies": {
         "@apidevtools/swagger-parser": "^10.1.0",
