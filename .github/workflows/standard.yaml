@@ -4,11 +4,9 @@ on:
   push:
     branches:
       - main
-      - standard-js  # Enable on the standard-js branch
   pull_request:
     branches:
       - main
-      - standard-js  # Enable on the standard-js branch
 
 defaults:
   run:
