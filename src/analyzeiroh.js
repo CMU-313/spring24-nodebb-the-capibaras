@@ -1,10 +1,15 @@
 const Iroh = require("iroh");
-let stage = new Iroh.Stage("testingiroh.js");
 
-// Add your Iroh.js listeners here
+const fs = require('fs');
+
+// Read the file synchronously
+const codeString = fs.readFileSync('./testingiroh.js', 'utf8');
+let stage = new Iroh.Stage(codeString);
+
 stage.addListener(Iroh.CALL).on("before", (event) => {
-    console.log("Function call:", event);
-});
+  console.log("Function call:", event);
+})
 
-// Require your example script to run it
-require("./testingiroh");
+// Evaluate the instrumented code
+eval(stage.script);
+
