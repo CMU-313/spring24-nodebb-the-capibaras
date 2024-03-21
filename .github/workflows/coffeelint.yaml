@@ -27,10 +27,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: ${{ matrix.node }}
 
       - name: Install dependencies
-        run: npm install
+        run: npm install coffeelint --save-dev
 
       - name: NPM Install
         uses: bahmutov/npm-install@v1
