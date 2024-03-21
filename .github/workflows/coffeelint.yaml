@@ -38,4 +38,4 @@ jobs:
           useLockFile: false
 
       - name: Run CoffeeLint
-        run: coffeelint . --file ./coffeelint.json
+        run: npm run lint:coffee
