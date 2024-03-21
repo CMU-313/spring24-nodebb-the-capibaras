@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: cp ./coffeelint.json coffeelint.json
+      - run: cp install/package.json package.json
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
