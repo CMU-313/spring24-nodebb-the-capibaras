@@ -1,10 +1,18 @@
 {
-    "indentation" : {
-      "level" : "error",
-      "value" : 4
-    },
-    "line_endings" : {
-      "value" : "unix",
-      "level" : "error"
-    }
+  "bracket_spacing": {
+    "level": "ignore"
+  },
+  "max_line_length": {
+    "level": "warn",
+    "value": 307048
+  },
+  "no_trailing_semicolons": {
+    "level": "ignore"
+  },
+  "indentation": {
+    "level": "ignore"
+  },
+  "no_trailing_whitespace": {
+    "level": "ignore"
+  }
 }
