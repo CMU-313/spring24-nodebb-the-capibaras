@@ -1,6 +1,4 @@
-
-
-name: Lint
+name: CoffeeLint
 
 on:
   push:
@@ -18,11 +16,11 @@ permissions:
   contents: read
 
 jobs:
-  lint:
+  coffeelint:
     permissions:
       checks: write  # for coverallsapp/github-action to create new checks
       contents: read  # for actions/checkout to fetch code
-    name: Lint
+    name: CoffeeLint
     strategy:
       fail-fast: false
       matrix:
@@ -81,5 +79,5 @@ jobs:
         run: |
           node app --setup="${SETUP}" --ci="${CI}"
 
-      - name: Run ESLint
-        run: npm run lint
+      - name: Run CoffeeLint
+        run: npm run lint:coffee
